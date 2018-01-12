@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.15
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestClient", "GoogleApiResponse\TestClient.csproj", "{4772FD6F-E264-4E57-A5F6-D9225E2F367F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{24BEF8A9-B252-42DA-B96E-0C98EF3B92DF} = {24BEF8A9-B252-42DA-B96E-0C98EF3B92DF}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RouteDetails", "RouteDetails\RouteDetails.csproj", "{24BEF8A9-B252-42DA-B96E-0C98EF3B92DF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4772FD6F-E264-4E57-A5F6-D9225E2F367F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4772FD6F-E264-4E57-A5F6-D9225E2F367F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4772FD6F-E264-4E57-A5F6-D9225E2F367F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4772FD6F-E264-4E57-A5F6-D9225E2F367F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24BEF8A9-B252-42DA-B96E-0C98EF3B92DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24BEF8A9-B252-42DA-B96E-0C98EF3B92DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24BEF8A9-B252-42DA-B96E-0C98EF3B92DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24BEF8A9-B252-42DA-B96E-0C98EF3B92DF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
