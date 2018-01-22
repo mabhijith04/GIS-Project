@@ -8,8 +8,8 @@ namespace GoogleApiResponse
     {
         public static string getRequestUri()
         {
-            string origin = "Electronics City";
-            string destination = "RT Nagar";
+            string origin = "Malleshwaram";
+            string destination = "IIITBangalore";
             string key = "AIzaSyAQPgUWeOz_y8BjEjuip3GjLnln3zOUmF8";
             string alternatives = "true";
             string requestUri = "https://maps.googleapis.com/maps/api/directions/json?" +
