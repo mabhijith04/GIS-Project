@@ -27,7 +27,12 @@ namespace GoogleApiResponse
             var streets = client.GetStreetData(getRequestUri());
             foreach (var item in streets)
             {
-                Console.WriteLine(item);
+                Console.WriteLine("Name : " + item.stName);
+                Console.WriteLine("Start Location Latitude : " + item.stLoc.lat);
+                Console.WriteLine("Start Location Longitude : " + item.stLoc.lng);
+                Console.WriteLine("End Location Latitude : " + item.endLoc.lat);
+                Console.WriteLine("End Location Longitude : " + item.endLoc.lng);
+                Console.WriteLine("############################################");
             }
             Console.ReadLine();
         }

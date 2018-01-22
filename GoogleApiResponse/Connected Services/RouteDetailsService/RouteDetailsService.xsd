@@ -1,9 +1,164 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/Arrays" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:complexType name="ArrayOfstring">
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/RouteDetails" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/RouteDetails" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:61341/RouteDetailsService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="ArrayOfStreetDetails">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StreetDetails" nillable="true" type="tns:StreetDetails" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ArrayOfstring" nillable="true" type="tns:ArrayOfstring" />
+  <xs:element name="ArrayOfStreetDetails" nillable="true" type="tns:ArrayOfStreetDetails" />
+  <xs:complexType name="StreetDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="endLoc" nillable="true" type="tns:EndLocation2" />
+      <xs:element minOccurs="0" name="stLoc" nillable="true" type="tns:StartLocation2" />
+      <xs:element minOccurs="0" name="stName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StreetDetails" nillable="true" type="tns:StreetDetails" />
+  <xs:complexType name="EndLocation2">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="lat" type="xs:double" />
+      <xs:element minOccurs="0" name="lng" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EndLocation2" nillable="true" type="tns:EndLocation2" />
+  <xs:complexType name="StartLocation2">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="lat" type="xs:double" />
+      <xs:element minOccurs="0" name="lng" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StartLocation2" nillable="true" type="tns:StartLocation2" />
+  <xs:complexType name="ArrayOfRoute">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Route" nillable="true" type="tns:Route" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRoute" nillable="true" type="tns:ArrayOfRoute" />
+  <xs:complexType name="Route">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bounds" nillable="true" type="tns:Bounds" />
+      <xs:element minOccurs="0" name="copyrights" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="legs" nillable="true" type="tns:ArrayOfLeg" />
+      <xs:element minOccurs="0" name="overview_polyline" nillable="true" type="tns:OverviewPolyline" />
+      <xs:element minOccurs="0" name="summary" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="warnings" nillable="true" type="q1:ArrayOfanyType" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="waypoint_order" nillable="true" type="q2:ArrayOfanyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Route" nillable="true" type="tns:Route" />
+  <xs:complexType name="Bounds">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="northeast" nillable="true" type="tns:Northeast" />
+      <xs:element minOccurs="0" name="southwest" nillable="true" type="tns:Southwest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Bounds" nillable="true" type="tns:Bounds" />
+  <xs:complexType name="Northeast">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="lat" type="xs:double" />
+      <xs:element minOccurs="0" name="lng" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Northeast" nillable="true" type="tns:Northeast" />
+  <xs:complexType name="Southwest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="lat" type="xs:double" />
+      <xs:element minOccurs="0" name="lng" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Southwest" nillable="true" type="tns:Southwest" />
+  <xs:complexType name="ArrayOfLeg">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Leg" nillable="true" type="tns:Leg" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLeg" nillable="true" type="tns:ArrayOfLeg" />
+  <xs:complexType name="Leg">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="distance" nillable="true" type="tns:Distance" />
+      <xs:element minOccurs="0" name="duration" nillable="true" type="tns:Duration" />
+      <xs:element minOccurs="0" name="end_address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="end_location" nillable="true" type="tns:EndLocation" />
+      <xs:element minOccurs="0" name="start_address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="start_location" nillable="true" type="tns:StartLocation" />
+      <xs:element minOccurs="0" name="steps" nillable="true" type="tns:ArrayOfStep" />
+      <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="traffic_speed_entry" nillable="true" type="q3:ArrayOfanyType" />
+      <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="via_waypoint" nillable="true" type="q4:ArrayOfanyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Leg" nillable="true" type="tns:Leg" />
+  <xs:complexType name="Distance">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="value" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Distance" nillable="true" type="tns:Distance" />
+  <xs:complexType name="Duration">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="value" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Duration" nillable="true" type="tns:Duration" />
+  <xs:complexType name="EndLocation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="lat" type="xs:double" />
+      <xs:element minOccurs="0" name="lng" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EndLocation" nillable="true" type="tns:EndLocation" />
+  <xs:complexType name="StartLocation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="lat" type="xs:double" />
+      <xs:element minOccurs="0" name="lng" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StartLocation" nillable="true" type="tns:StartLocation" />
+  <xs:complexType name="ArrayOfStep">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Step" nillable="true" type="tns:Step" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStep" nillable="true" type="tns:ArrayOfStep" />
+  <xs:complexType name="Step">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="distance" nillable="true" type="tns:Distance2" />
+      <xs:element minOccurs="0" name="duration" nillable="true" type="tns:Duration2" />
+      <xs:element minOccurs="0" name="end_location" nillable="true" type="tns:EndLocation2" />
+      <xs:element minOccurs="0" name="html_instructions" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="maneuver" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="polyline" nillable="true" type="tns:Polyline" />
+      <xs:element minOccurs="0" name="start_location" nillable="true" type="tns:StartLocation2" />
+      <xs:element minOccurs="0" name="travel_mode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Step" nillable="true" type="tns:Step" />
+  <xs:complexType name="Distance2">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="value" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Distance2" nillable="true" type="tns:Distance2" />
+  <xs:complexType name="Duration2">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="value" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Duration2" nillable="true" type="tns:Duration2" />
+  <xs:complexType name="Polyline">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="points" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Polyline" nillable="true" type="tns:Polyline" />
+  <xs:complexType name="OverviewPolyline">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="points" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OverviewPolyline" nillable="true" type="tns:OverviewPolyline" />
 </xs:schema>

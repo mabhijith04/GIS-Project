@@ -9,26 +9,32 @@ namespace RouteDetails
     public class GoogleGeoCodeData
     {
         string uri = null;
+        RootObject mapdata = null;
         public GoogleGeoCodeData(string RequestUri)
         {
             this.uri = RequestUri;
+            HttpRequestReponse google = new HttpRequestReponse(uri);
+            string json = google.getResponse();
+            mapdata = JsonConvert.DeserializeObject<RootObject>(json);
         }
-        public List<string> GetStreetInfo()
+
+        public List<Route> GetRoutes()
+        {
+            return null;
+        }
+
+        public List<StreetDetails> GetStreetInfo()
         {
             try
             {
-                HttpRequestReponse google = new HttpRequestReponse(uri);
-                string json = google.getResponse();
-                RootObject mapdata = JsonConvert.DeserializeObject<RootObject>(json);
-
-                HashSet<string> streets = new HashSet<string>();
+                HashSet<StreetDetails> streets = new HashSet<StreetDetails>();
                 foreach (var route in mapdata.routes)
                 {
                     foreach (var leg in route.legs)
                     {
                         foreach (var step in leg.steps)
                         {
-                            streets.UnionWith(Utilities.GetStreets(step.html_instructions));
+                            streets.UnionWith(Utilities.GetStreets(step));
                         }
                     }
                 }

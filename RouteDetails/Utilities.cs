@@ -5,6 +5,12 @@ using System.Linq;
 
 namespace RouteDetails
 {
+    public class StreetDetails
+    {
+        public string stName { get; set; }
+        public EndLocation2 endLoc { get; set; }
+        public StartLocation2 stLoc { get; set; }
+    }
     class Utilities
     {
         public static byte[] ReadFully(Stream input)
@@ -21,19 +27,26 @@ namespace RouteDetails
             }
         }
 
-        public static List<String> GetStreets(string html)
+        public static List<StreetDetails> GetStreets(Step step)
         {
+            string html = step.html_instructions;
             string[] directions = { "north", "south", "east", "west", "northeast", "northwest",
                                     "southeast", "southwest", "left", "right", "straight" };
-            List<String> streets = new List<string>();
+            List<StreetDetails> streets = new List<StreetDetails>();
             var a = html.Split(new string[] { "<b>" }, StringSplitOptions.None);
             for (int i = 1; i < a.Length; i++)
             {
+                StreetDetails sd = new StreetDetails();
                 var b = a[i].Split(new string[] { "</b>" }, StringSplitOptions.None)[0];
                 if (directions.Contains(b))
                     continue;
                 else
-                    streets.Add(b);
+                {
+                    sd.endLoc = step.end_location;
+                    sd.stLoc = step.start_location;
+                    sd.stName = b;
+                    streets.Add(sd);
+                }
             }
             return streets;
         }

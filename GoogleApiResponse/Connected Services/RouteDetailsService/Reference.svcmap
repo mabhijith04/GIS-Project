@@ -23,10 +23,11 @@
   </MetadataSources>
   <Metadata>
     <MetadataFile FileName="RouteDetailsService.wsdl" MetadataType="Wsdl" ID="200ea605-c450-42fb-aa45-699464ffdf4b" SourceId="1" SourceUrl="http://localhost:61341/RouteDetailsService.svc?wsdl" />
-    <MetadataFile FileName="RouteDetailsService.disco" MetadataType="Disco" ID="295e5567-742d-416e-9421-fb120ab73d96" SourceId="1" SourceUrl="http://localhost:61341/RouteDetailsService.svc?disco" />
     <MetadataFile FileName="RouteDetailsService.xsd" MetadataType="Schema" ID="ef4e3815-4e89-4dac-814d-9c31aa4d6bbe" SourceId="1" SourceUrl="http://localhost:61341/RouteDetailsService.svc?xsd=xsd2" />
-    <MetadataFile FileName="RouteDetailsService1.xsd" MetadataType="Schema" ID="5c61d4e8-49d0-472e-8625-fc2f7cd1ea8d" SourceId="1" SourceUrl="http://localhost:61341/RouteDetailsService.svc?xsd=xsd1" />
+    <MetadataFile FileName="RouteDetailsService3.xsd" MetadataType="Schema" ID="1e57929b-7087-41a7-9c6f-ba88b0fe3f01" SourceId="1" SourceUrl="http://localhost:61341/RouteDetailsService.svc?xsd=xsd3" />
     <MetadataFile FileName="RouteDetailsService2.xsd" MetadataType="Schema" ID="0623bd12-409a-4f14-bf8f-90b95c083458" SourceId="1" SourceUrl="http://localhost:61341/RouteDetailsService.svc?xsd=xsd0" />
+    <MetadataFile FileName="RouteDetailsService.disco" MetadataType="Disco" ID="295e5567-742d-416e-9421-fb120ab73d96" SourceId="1" SourceUrl="http://localhost:61341/RouteDetailsService.svc?disco" />
+    <MetadataFile FileName="RouteDetailsService1.xsd" MetadataType="Schema" ID="5c61d4e8-49d0-472e-8625-fc2f7cd1ea8d" SourceId="1" SourceUrl="http://localhost:61341/RouteDetailsService.svc?xsd=xsd1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

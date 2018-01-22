@@ -12,10 +12,16 @@ namespace RouteDetails
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public class RouteDetailsService : IRouteDetailsService
     {
-        public List<String> GetStreetData(string requestUri)
+        public List<StreetDetails> GetStreetData(string requestUri)
         {
             GoogleGeoCodeData google = new GoogleGeoCodeData(requestUri);
             return google.GetStreetInfo();
+        }
+
+        public List<Route> GetRoutes(string requestUri)
+        {
+            GoogleGeoCodeData google = new GoogleGeoCodeData(requestUri);
+            return google.GetRoutes();
         }
     }
 }

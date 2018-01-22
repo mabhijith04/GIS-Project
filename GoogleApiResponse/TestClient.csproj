@@ -57,6 +57,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Connected Services\RouteDetailsService\GoogleApiResponse.RouteDetailsService.Route.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RouteDetailsService\GoogleApiResponse.RouteDetailsService.StreetDetails.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\RouteDetailsService\RouteDetailsService.wsdl" />
     <None Include="Connected Services\RouteDetailsService\RouteDetailsService.xsd">
       <SubType>Designer</SubType>
@@ -65,6 +71,9 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\RouteDetailsService\RouteDetailsService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\RouteDetailsService\RouteDetailsService3.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />

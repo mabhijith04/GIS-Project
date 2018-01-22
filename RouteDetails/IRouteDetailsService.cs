@@ -13,7 +13,12 @@ namespace RouteDetails
     public interface IRouteDetailsService
     {
         [OperationContract]
-        List<String> GetStreetData(string requestUri);
-        // TODO: Add your service operations here
+        List<StreetDetails> GetStreetData(string requestUri);
+
+        [OperationContract]
+        List<Route> GetRoutes(string requestUri);
     }
 }
+
+
+    
