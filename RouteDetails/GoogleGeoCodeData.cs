@@ -10,12 +10,23 @@ namespace RouteDetails
     {
         string uri = null;
         RootObject mapdata = null;
+        string json = null;
+
         public GoogleGeoCodeData(string RequestUri)
         {
             this.uri = RequestUri;
             HttpRequestReponse google = new HttpRequestReponse(uri);
-            string json = google.getResponse();
+            json = google.getResponse();
+        }
+
+        public void SetMapData()
+        {
             mapdata = JsonConvert.DeserializeObject<RootObject>(json);
+        }
+
+        public void ReverseGeoCode()
+        {
+            
         }
 
         public List<Route> GetRoutes()
