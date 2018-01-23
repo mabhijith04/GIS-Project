@@ -19,6 +19,7 @@ namespace GoogleApiResponse
                                  "&key=" + key;
             
             return requestUri.Replace(" ", "+");
+
         }
 
         static void Main(string[] args)
