@@ -23,13 +23,10 @@ namespace GoogleApiResponse.RouteDetailsService {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GoogleApiResponse.RouteDetailsService.EndLocation2 endLocField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GoogleApiResponse.RouteDetailsService.StartLocation2 stLocField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string stNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private GoogleApiResponse.RouteDetailsService.Step stepField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -42,32 +39,6 @@ namespace GoogleApiResponse.RouteDetailsService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public GoogleApiResponse.RouteDetailsService.EndLocation2 endLoc {
-            get {
-                return this.endLocField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.endLocField, value) != true)) {
-                    this.endLocField = value;
-                    this.RaisePropertyChanged("endLoc");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public GoogleApiResponse.RouteDetailsService.StartLocation2 stLoc {
-            get {
-                return this.stLocField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.stLocField, value) != true)) {
-                    this.stLocField = value;
-                    this.RaisePropertyChanged("stLoc");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
         public string stName {
             get {
                 return this.stNameField;
@@ -76,6 +47,298 @@ namespace GoogleApiResponse.RouteDetailsService {
                 if ((object.ReferenceEquals(this.stNameField, value) != true)) {
                     this.stNameField = value;
                     this.RaisePropertyChanged("stName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public GoogleApiResponse.RouteDetailsService.Step step {
+            get {
+                return this.stepField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.stepField, value) != true)) {
+                    this.stepField = value;
+                    this.RaisePropertyChanged("step");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Step", Namespace="http://schemas.datacontract.org/2004/07/RouteDetails")]
+    [System.SerializableAttribute()]
+    public partial class Step : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private GoogleApiResponse.RouteDetailsService.Distance2 distanceField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private GoogleApiResponse.RouteDetailsService.Duration2 durationField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private GoogleApiResponse.RouteDetailsService.EndLocation2 end_locationField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string html_instructionsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string maneuverField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private GoogleApiResponse.RouteDetailsService.Polyline polylineField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private GoogleApiResponse.RouteDetailsService.StartLocation2 start_locationField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string travel_modeField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public GoogleApiResponse.RouteDetailsService.Distance2 distance {
+            get {
+                return this.distanceField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.distanceField, value) != true)) {
+                    this.distanceField = value;
+                    this.RaisePropertyChanged("distance");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public GoogleApiResponse.RouteDetailsService.Duration2 duration {
+            get {
+                return this.durationField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.durationField, value) != true)) {
+                    this.durationField = value;
+                    this.RaisePropertyChanged("duration");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public GoogleApiResponse.RouteDetailsService.EndLocation2 end_location {
+            get {
+                return this.end_locationField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.end_locationField, value) != true)) {
+                    this.end_locationField = value;
+                    this.RaisePropertyChanged("end_location");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string html_instructions {
+            get {
+                return this.html_instructionsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.html_instructionsField, value) != true)) {
+                    this.html_instructionsField = value;
+                    this.RaisePropertyChanged("html_instructions");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string maneuver {
+            get {
+                return this.maneuverField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.maneuverField, value) != true)) {
+                    this.maneuverField = value;
+                    this.RaisePropertyChanged("maneuver");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public GoogleApiResponse.RouteDetailsService.Polyline polyline {
+            get {
+                return this.polylineField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.polylineField, value) != true)) {
+                    this.polylineField = value;
+                    this.RaisePropertyChanged("polyline");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public GoogleApiResponse.RouteDetailsService.StartLocation2 start_location {
+            get {
+                return this.start_locationField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.start_locationField, value) != true)) {
+                    this.start_locationField = value;
+                    this.RaisePropertyChanged("start_location");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string travel_mode {
+            get {
+                return this.travel_modeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.travel_modeField, value) != true)) {
+                    this.travel_modeField = value;
+                    this.RaisePropertyChanged("travel_mode");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Distance2", Namespace="http://schemas.datacontract.org/2004/07/RouteDetails")]
+    [System.SerializableAttribute()]
+    public partial class Distance2 : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string textField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int valueField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string text {
+            get {
+                return this.textField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.textField, value) != true)) {
+                    this.textField = value;
+                    this.RaisePropertyChanged("text");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int value {
+            get {
+                return this.valueField;
+            }
+            set {
+                if ((this.valueField.Equals(value) != true)) {
+                    this.valueField = value;
+                    this.RaisePropertyChanged("value");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Duration2", Namespace="http://schemas.datacontract.org/2004/07/RouteDetails")]
+    [System.SerializableAttribute()]
+    public partial class Duration2 : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string textField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int valueField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string text {
+            get {
+                return this.textField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.textField, value) != true)) {
+                    this.textField = value;
+                    this.RaisePropertyChanged("text");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int value {
+            get {
+                return this.valueField;
+            }
+            set {
+                if ((this.valueField.Equals(value) != true)) {
+                    this.valueField = value;
+                    this.RaisePropertyChanged("value");
                 }
             }
         }
@@ -137,6 +400,51 @@ namespace GoogleApiResponse.RouteDetailsService {
                 if ((this.lngField.Equals(value) != true)) {
                     this.lngField = value;
                     this.RaisePropertyChanged("lng");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Polyline", Namespace="http://schemas.datacontract.org/2004/07/RouteDetails")]
+    [System.SerializableAttribute()]
+    public partial class Polyline : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string pointsField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string points {
+            get {
+                return this.pointsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.pointsField, value) != true)) {
+                    this.pointsField = value;
+                    this.RaisePropertyChanged("points");
                 }
             }
         }
@@ -218,7 +526,11 @@ namespace GoogleApiResponse.RouteDetailsService {
     [System.SerializableAttribute()]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(GoogleApiResponse.RouteDetailsService.StreetDetails[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(GoogleApiResponse.RouteDetailsService.StreetDetails))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GoogleApiResponse.RouteDetailsService.Step))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GoogleApiResponse.RouteDetailsService.Distance2))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GoogleApiResponse.RouteDetailsService.Duration2))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(GoogleApiResponse.RouteDetailsService.EndLocation2))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GoogleApiResponse.RouteDetailsService.Polyline))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(GoogleApiResponse.RouteDetailsService.StartLocation2))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(GoogleApiResponse.RouteDetailsService.Route[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(GoogleApiResponse.RouteDetailsService.Bounds))]
@@ -231,10 +543,6 @@ namespace GoogleApiResponse.RouteDetailsService {
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(GoogleApiResponse.RouteDetailsService.EndLocation))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(GoogleApiResponse.RouteDetailsService.StartLocation))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(GoogleApiResponse.RouteDetailsService.Step[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GoogleApiResponse.RouteDetailsService.Step))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GoogleApiResponse.RouteDetailsService.Distance2))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GoogleApiResponse.RouteDetailsService.Duration2))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GoogleApiResponse.RouteDetailsService.Polyline))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(GoogleApiResponse.RouteDetailsService.OverviewPolyline))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(object[]))]
     public partial class Route : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -608,7 +916,11 @@ namespace GoogleApiResponse.RouteDetailsService {
     [System.SerializableAttribute()]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(GoogleApiResponse.RouteDetailsService.StreetDetails[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(GoogleApiResponse.RouteDetailsService.StreetDetails))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GoogleApiResponse.RouteDetailsService.Step))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GoogleApiResponse.RouteDetailsService.Distance2))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GoogleApiResponse.RouteDetailsService.Duration2))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(GoogleApiResponse.RouteDetailsService.EndLocation2))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GoogleApiResponse.RouteDetailsService.Polyline))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(GoogleApiResponse.RouteDetailsService.StartLocation2))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(GoogleApiResponse.RouteDetailsService.Route[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(GoogleApiResponse.RouteDetailsService.Route))]
@@ -621,10 +933,6 @@ namespace GoogleApiResponse.RouteDetailsService {
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(GoogleApiResponse.RouteDetailsService.EndLocation))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(GoogleApiResponse.RouteDetailsService.StartLocation))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(GoogleApiResponse.RouteDetailsService.Step[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GoogleApiResponse.RouteDetailsService.Step))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GoogleApiResponse.RouteDetailsService.Distance2))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GoogleApiResponse.RouteDetailsService.Duration2))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GoogleApiResponse.RouteDetailsService.Polyline))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(GoogleApiResponse.RouteDetailsService.OverviewPolyline))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(object[]))]
     public partial class Leg : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -1026,330 +1334,6 @@ namespace GoogleApiResponse.RouteDetailsService {
                 if ((this.lngField.Equals(value) != true)) {
                     this.lngField = value;
                     this.RaisePropertyChanged("lng");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Step", Namespace="http://schemas.datacontract.org/2004/07/RouteDetails")]
-    [System.SerializableAttribute()]
-    public partial class Step : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GoogleApiResponse.RouteDetailsService.Distance2 distanceField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GoogleApiResponse.RouteDetailsService.Duration2 durationField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GoogleApiResponse.RouteDetailsService.EndLocation2 end_locationField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string html_instructionsField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string maneuverField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GoogleApiResponse.RouteDetailsService.Polyline polylineField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private GoogleApiResponse.RouteDetailsService.StartLocation2 start_locationField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string travel_modeField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public GoogleApiResponse.RouteDetailsService.Distance2 distance {
-            get {
-                return this.distanceField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.distanceField, value) != true)) {
-                    this.distanceField = value;
-                    this.RaisePropertyChanged("distance");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public GoogleApiResponse.RouteDetailsService.Duration2 duration {
-            get {
-                return this.durationField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.durationField, value) != true)) {
-                    this.durationField = value;
-                    this.RaisePropertyChanged("duration");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public GoogleApiResponse.RouteDetailsService.EndLocation2 end_location {
-            get {
-                return this.end_locationField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.end_locationField, value) != true)) {
-                    this.end_locationField = value;
-                    this.RaisePropertyChanged("end_location");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string html_instructions {
-            get {
-                return this.html_instructionsField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.html_instructionsField, value) != true)) {
-                    this.html_instructionsField = value;
-                    this.RaisePropertyChanged("html_instructions");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string maneuver {
-            get {
-                return this.maneuverField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.maneuverField, value) != true)) {
-                    this.maneuverField = value;
-                    this.RaisePropertyChanged("maneuver");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public GoogleApiResponse.RouteDetailsService.Polyline polyline {
-            get {
-                return this.polylineField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.polylineField, value) != true)) {
-                    this.polylineField = value;
-                    this.RaisePropertyChanged("polyline");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public GoogleApiResponse.RouteDetailsService.StartLocation2 start_location {
-            get {
-                return this.start_locationField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.start_locationField, value) != true)) {
-                    this.start_locationField = value;
-                    this.RaisePropertyChanged("start_location");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string travel_mode {
-            get {
-                return this.travel_modeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.travel_modeField, value) != true)) {
-                    this.travel_modeField = value;
-                    this.RaisePropertyChanged("travel_mode");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Distance2", Namespace="http://schemas.datacontract.org/2004/07/RouteDetails")]
-    [System.SerializableAttribute()]
-    public partial class Distance2 : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string textField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int valueField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string text {
-            get {
-                return this.textField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.textField, value) != true)) {
-                    this.textField = value;
-                    this.RaisePropertyChanged("text");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int value {
-            get {
-                return this.valueField;
-            }
-            set {
-                if ((this.valueField.Equals(value) != true)) {
-                    this.valueField = value;
-                    this.RaisePropertyChanged("value");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Duration2", Namespace="http://schemas.datacontract.org/2004/07/RouteDetails")]
-    [System.SerializableAttribute()]
-    public partial class Duration2 : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string textField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int valueField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string text {
-            get {
-                return this.textField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.textField, value) != true)) {
-                    this.textField = value;
-                    this.RaisePropertyChanged("text");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int value {
-            get {
-                return this.valueField;
-            }
-            set {
-                if ((this.valueField.Equals(value) != true)) {
-                    this.valueField = value;
-                    this.RaisePropertyChanged("value");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Polyline", Namespace="http://schemas.datacontract.org/2004/07/RouteDetails")]
-    [System.SerializableAttribute()]
-    public partial class Polyline : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string pointsField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string points {
-            get {
-                return this.pointsField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.pointsField, value) != true)) {
-                    this.pointsField = value;
-                    this.RaisePropertyChanged("points");
                 }
             }
         }

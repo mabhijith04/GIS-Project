@@ -9,12 +9,38 @@
   <xs:element name="ArrayOfStreetDetails" nillable="true" type="tns:ArrayOfStreetDetails" />
   <xs:complexType name="StreetDetails">
     <xs:sequence>
-      <xs:element minOccurs="0" name="endLoc" nillable="true" type="tns:EndLocation2" />
-      <xs:element minOccurs="0" name="stLoc" nillable="true" type="tns:StartLocation2" />
       <xs:element minOccurs="0" name="stName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="step" nillable="true" type="tns:Step" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="StreetDetails" nillable="true" type="tns:StreetDetails" />
+  <xs:complexType name="Step">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="distance" nillable="true" type="tns:Distance2" />
+      <xs:element minOccurs="0" name="duration" nillable="true" type="tns:Duration2" />
+      <xs:element minOccurs="0" name="end_location" nillable="true" type="tns:EndLocation2" />
+      <xs:element minOccurs="0" name="html_instructions" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="maneuver" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="polyline" nillable="true" type="tns:Polyline" />
+      <xs:element minOccurs="0" name="start_location" nillable="true" type="tns:StartLocation2" />
+      <xs:element minOccurs="0" name="travel_mode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Step" nillable="true" type="tns:Step" />
+  <xs:complexType name="Distance2">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="value" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Distance2" nillable="true" type="tns:Distance2" />
+  <xs:complexType name="Duration2">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="value" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Duration2" nillable="true" type="tns:Duration2" />
   <xs:complexType name="EndLocation2">
     <xs:sequence>
       <xs:element minOccurs="0" name="lat" type="xs:double" />
@@ -22,6 +48,12 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="EndLocation2" nillable="true" type="tns:EndLocation2" />
+  <xs:complexType name="Polyline">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="points" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Polyline" nillable="true" type="tns:Polyline" />
   <xs:complexType name="StartLocation2">
     <xs:sequence>
       <xs:element minOccurs="0" name="lat" type="xs:double" />
@@ -122,39 +154,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfStep" nillable="true" type="tns:ArrayOfStep" />
-  <xs:complexType name="Step">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="distance" nillable="true" type="tns:Distance2" />
-      <xs:element minOccurs="0" name="duration" nillable="true" type="tns:Duration2" />
-      <xs:element minOccurs="0" name="end_location" nillable="true" type="tns:EndLocation2" />
-      <xs:element minOccurs="0" name="html_instructions" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="maneuver" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="polyline" nillable="true" type="tns:Polyline" />
-      <xs:element minOccurs="0" name="start_location" nillable="true" type="tns:StartLocation2" />
-      <xs:element minOccurs="0" name="travel_mode" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="Step" nillable="true" type="tns:Step" />
-  <xs:complexType name="Distance2">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="text" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="value" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="Distance2" nillable="true" type="tns:Distance2" />
-  <xs:complexType name="Duration2">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="text" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="value" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="Duration2" nillable="true" type="tns:Duration2" />
-  <xs:complexType name="Polyline">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="points" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="Polyline" nillable="true" type="tns:Polyline" />
   <xs:complexType name="OverviewPolyline">
     <xs:sequence>
       <xs:element minOccurs="0" name="points" nillable="true" type="xs:string" />

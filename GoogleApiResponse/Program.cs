@@ -29,10 +29,10 @@ namespace GoogleApiResponse
             foreach (var item in streets)
             {
                 Console.WriteLine("Name : " + item.stName);
-                Console.WriteLine("Start Location Latitude : " + item.stLoc.lat);
-                Console.WriteLine("Start Location Longitude : " + item.stLoc.lng);
-                Console.WriteLine("End Location Latitude : " + item.endLoc.lat);
-                Console.WriteLine("End Location Longitude : " + item.endLoc.lng);
+                Console.WriteLine("Start Location Latitude : " + item.step.start_location.lat);
+                Console.WriteLine("Start Location Longitude : " + item.step.start_location.lng);
+                Console.WriteLine("End Location Latitude : " + item.step.end_location.lat);
+                Console.WriteLine("End Location Longitude : " + item.step.end_location.lng);
                 Console.WriteLine("############################################");
             }
             Console.ReadLine();

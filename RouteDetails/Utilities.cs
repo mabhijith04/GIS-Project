@@ -8,8 +8,7 @@ namespace RouteDetails
     public class StreetDetails
     {
         public string stName { get; set; }
-        public EndLocation2 endLoc { get; set; }
-        public StartLocation2 stLoc { get; set; }
+        public Step step {get; set;}
     }
     class Utilities
     {
@@ -42,9 +41,8 @@ namespace RouteDetails
                     continue;
                 else
                 {
-                    sd.endLoc = step.end_location;
-                    sd.stLoc = step.start_location;
                     sd.stName = b;
+                    sd.step = step;
                     streets.Add(sd);
                 }
             }
