@@ -19,7 +19,7 @@ namespace GoogleApiResponse
                                  "&destination=" + destination +
                                  "&alternatives=" + alternatives +
                                  "&key=" + key;
-            
+
             return requestUri.Replace(" ", "+");
 
         }
@@ -27,8 +27,18 @@ namespace GoogleApiResponse
         static void Main(string[] args)
         {
             RouteDetailsService.RouteDetailsServiceClient client = new RouteDetailsService.RouteDetailsServiceClient();
-            var streets = client.GetStreetData(getRequestUri());
+            var counter = client.GetRouteSafety(getRequestUri());
+            //pushData(streets);
+            foreach (var item in counter)
+            {
+                Console.WriteLine(item);
+            }
+            Console.ReadLine();
 
+        }
+
+        public static void pushData(RouteDetailsService.StreetDetails[] streets)
+        {
             SqlConnection conn = DBUtils.GetDBConnection();
             string sql = "insert into AccidentArea([StartLat], [StartLon], [EndLat], [EndLon], [StreetName], [AccidentCount]) values (@slat, @slon, @elat, @elon, @stname, @accidentRate)";
             conn.Open();
@@ -48,8 +58,6 @@ namespace GoogleApiResponse
                 }
             }
             Console.WriteLine("DONE");
-            Console.ReadLine();
-
         }
     }
 }
