@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 
 namespace SafeNav_DLL
 {
-    class DBUtils
+    public class DBUtils
     {
         public static SqlConnection GetDBConnection()
         {
