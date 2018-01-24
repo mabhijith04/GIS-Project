@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.15
+VisualStudioVersion = 15.0.27130.2024
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestClient", "GoogleApiResponse\TestClient.csproj", "{4772FD6F-E264-4E57-A5F6-D9225E2F367F}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestClient", "GoogleApiResp
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RouteDetails", "RouteDetails\RouteDetails.csproj", "{24BEF8A9-B252-42DA-B96E-0C98EF3B92DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SafeNav_DLL", "SafeNav_DLL\SafeNav_DLL.csproj", "{2513CF42-5B9F-4A17-8F11-8D96C39E1AB5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,8 +26,15 @@ Global
 		{24BEF8A9-B252-42DA-B96E-0C98EF3B92DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{24BEF8A9-B252-42DA-B96E-0C98EF3B92DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{24BEF8A9-B252-42DA-B96E-0C98EF3B92DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2513CF42-5B9F-4A17-8F11-8D96C39E1AB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2513CF42-5B9F-4A17-8F11-8D96C39E1AB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2513CF42-5B9F-4A17-8F11-8D96C39E1AB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2513CF42-5B9F-4A17-8F11-8D96C39E1AB5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C1548DBA-C086-41A1-89E4-79CDFFEAA479}
 	EndGlobalSection
 EndGlobal
