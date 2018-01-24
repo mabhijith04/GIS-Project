@@ -2,6 +2,12 @@
 
 namespace RouteDetails
 {
+    public class RouteInformation
+    {
+        public List<GeocodedWaypoint> geocoded_waypoints { get; set; }
+        public List<Route> routes { get; set; }
+        public string status { get; set; }
+    }
 
     public class GeocodedWaypoint
     {
@@ -120,12 +126,5 @@ namespace RouteDetails
         public string summary { get; set; }
         public List<object> warnings { get; set; }
         public List<object> waypoint_order { get; set; }
-    }
-
-    public class RootObject
-    {
-        public List<GeocodedWaypoint> geocoded_waypoints { get; set; }
-        public List<Route> routes { get; set; }
-        public string status { get; set; }
     }
 }

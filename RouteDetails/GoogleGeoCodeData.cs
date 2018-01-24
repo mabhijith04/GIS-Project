@@ -9,7 +9,6 @@ namespace RouteDetails
     public class GoogleGeoCodeData
     {
         string uri = null;
-        RootObject mapdata = null;
         string json = null;
 
         public GoogleGeoCodeData(string RequestUri)
@@ -19,9 +18,10 @@ namespace RouteDetails
             json = google.getResponse();
         }
 
-        public void SetMapData()
+        public List<StreetDetails> GetStreetInfo()
         {
-            mapdata = JsonConvert.DeserializeObject<RootObject>(json);
+            RouteInformation mapdata = JsonConvert.DeserializeObject<RouteInformation>(json);
+            return ParseStreetInfo(mapdata);
         }
 
         public void ReverseGeoCode()
@@ -34,7 +34,7 @@ namespace RouteDetails
             return null;
         }
 
-        public List<StreetDetails> GetStreetInfo()
+        public List<StreetDetails> ParseStreetInfo(RouteInformation mapdata)
         {
             try
             {

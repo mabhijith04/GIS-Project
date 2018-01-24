@@ -71,7 +71,7 @@
   <ItemGroup>
     <Compile Include="GoogleGeoCodeData.cs" />
     <Compile Include="HttpRequestReponse.cs" />
-    <Compile Include="RootObject.cs" />
+    <Compile Include="RouteInformation.cs" />
     <Compile Include="RouteDetailsService.svc.cs">
       <DependentUpon>RouteDetailsService.svc</DependentUpon>
     </Compile>

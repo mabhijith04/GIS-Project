@@ -15,7 +15,6 @@ namespace RouteDetails
         public List<StreetDetails> GetStreetData(string requestUri)
         {
             GoogleGeoCodeData google = new GoogleGeoCodeData(requestUri);
-            google.SetMapData();
             return google.GetStreetInfo();
         }
 
