@@ -14,7 +14,7 @@ namespace SafeNav_DLL
             string datasource = @".\sqlexpress";
             string database = "safenav";
             string username = "sa";
-            string password = "Lgp765phone#";
+            string password = "SAMPLEPASS";
 
             return DBSQLServerUtils.GetDBConnection(datasource, database, username, password);
         }

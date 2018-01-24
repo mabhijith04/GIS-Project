@@ -27,18 +27,8 @@ namespace GoogleApiResponse
         static void Main(string[] args)
         {
             RouteDetailsService.RouteDetailsServiceClient client = new RouteDetailsService.RouteDetailsServiceClient();
-            var counter = client.GetRouteSafety(getRequestUri());
-            //pushData(streets);
-            foreach (var item in counter)
-            {
-                Console.WriteLine(item);
-            }
-            Console.ReadLine();
+            var streets = client.GetStreetData(getRequestUri());
 
-        }
-
-        public static void pushData(RouteDetailsService.StreetDetails[] streets)
-        {
             SqlConnection conn = DBUtils.GetDBConnection();
             string sql = "insert into AccidentArea([StartLat], [StartLon], [EndLat], [EndLon], [StreetName], [AccidentCount]) values (@slat, @slon, @elat, @elon, @stname, @accidentRate)";
             conn.Open();
@@ -58,6 +48,8 @@ namespace GoogleApiResponse
                 }
             }
             Console.WriteLine("DONE");
+            Console.ReadLine();
+
         }
     }
 }
