@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Configuration;
 
-namespace Tutorial.SqlConn
+namespace SafeNav_DLL
 {
     class DBSQLServerUtils
     {

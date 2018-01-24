@@ -16,7 +16,7 @@ namespace RouteDetails
         List<StreetDetails> GetStreetData(string requestUri);
 
         [OperationContract]
-        List<Route> GetRoutes(string requestUri);
+        List<int> GetRouteSafety(string requestUri);
     }
 }
 

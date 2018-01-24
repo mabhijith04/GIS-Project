@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Tutorial.SqlConn;
+using SafeNav_DLL;
 using System.Data.SqlClient;
 
 namespace ConnectSQLServer

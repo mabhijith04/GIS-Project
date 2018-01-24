@@ -29,7 +29,7 @@ namespace RouteDetails
             
         }
 
-        public List<Route> GetRoutes()
+        public List<int> GetRouteSafety()
         {
             return null;
         }

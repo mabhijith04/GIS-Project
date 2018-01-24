@@ -18,10 +18,10 @@ namespace RouteDetails
             return google.GetStreetInfo();
         }
 
-        public List<Route> GetRoutes(string requestUri)
+        public List<int> GetRouteSafety(string requestUri)
         {
             GoogleGeoCodeData google = new GoogleGeoCodeData(requestUri);
-            return google.GetRoutes();
+            return google.GetRouteSafety();
         }
     }
 }

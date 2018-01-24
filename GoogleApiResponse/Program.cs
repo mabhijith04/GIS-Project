@@ -1,6 +1,8 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using SafeNav_DLL;
 
 namespace GoogleApiResponse
 {
@@ -26,16 +28,28 @@ namespace GoogleApiResponse
         {
             RouteDetailsService.RouteDetailsServiceClient client = new RouteDetailsService.RouteDetailsServiceClient();
             var streets = client.GetStreetData(getRequestUri());
+
+            SqlConnection conn = DBUtils.GetDBConnection();
+            string sql = "insert into AccidentArea([StartLat], [StartLon], [EndLat], [EndLon], [StreetName], [AccidentCount]) values (@slat, @slon, @elat, @elon, @stname, @accidentRate)";
+            conn.Open();
+            Random random = new Random();
             foreach (var item in streets)
             {
-                Console.WriteLine("Name : " + item.stName);
-                Console.WriteLine("Start Location Latitude : " + item.step.start_location.lat);
-                Console.WriteLine("Start Location Longitude : " + item.step.start_location.lng);
-                Console.WriteLine("End Location Latitude : " + item.step.end_location.lat);
-                Console.WriteLine("End Location Longitude : " + item.step.end_location.lng);
-                Console.WriteLine("############################################");
+                using (SqlCommand cmd = new SqlCommand(sql, conn))
+                {
+                    int randomNumber = random.Next(0, 100);
+                    cmd.Parameters.AddWithValue("@slat", item.step.start_location.lat);
+                    cmd.Parameters.AddWithValue("@slon", item.step.start_location.lng);
+                    cmd.Parameters.AddWithValue("@elat", item.step.end_location.lat);
+                    cmd.Parameters.AddWithValue("@elon", item.step.end_location.lng);
+                    cmd.Parameters.AddWithValue("@stname", item.stName);
+                    cmd.Parameters.AddWithValue("@accidentRate", randomNumber);
+                    cmd.ExecuteNonQuery();
+                }
             }
+            Console.WriteLine("DONE");
             Console.ReadLine();
+
         }
     }
 }

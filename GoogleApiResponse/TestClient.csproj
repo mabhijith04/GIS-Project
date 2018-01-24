@@ -57,9 +57,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Connected Services\RouteDetailsService\GoogleApiResponse.RouteDetailsService.Route.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Connected Services\RouteDetailsService\GoogleApiResponse.RouteDetailsService.StreetDetails.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -98,6 +95,12 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SafeNav_DLL\SafeNav_DLL.csproj">
+      <Project>{2513CF42-5B9F-4A17-8F11-8D96C39E1AB5}</Project>
+      <Name>SafeNav_DLL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
